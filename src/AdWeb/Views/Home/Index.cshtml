@@ -1,0 +1,22 @@
+﻿@model AuthModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Auth test</h1>
+    <div>@Model.Message</div>
+</div>
+<form asp-controller="Home" asp-action="Login" method="post">
+    <div class="row">
+        <div>
+            <label asp-for="Username">Username</label>
+                <input asp-for="Username"/>
+        </div>
+        <div>
+            <label asp-for="Password">Password</label>
+            <input asp-for="Password" type="password"/>
+        </div>
+        <button type="submit">Login</button>
+    </div>
+</form>
